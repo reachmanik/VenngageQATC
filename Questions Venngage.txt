@@ -1,0 +1,36 @@
+5)
+
+If you were asked to implement all the tests of sign up page, list out the tests:
+You would implement
+You would not implement and the reasons
+
+
+Ans)
+
+I would implement :
+a) successful Registration
+b) unsuccessful Registration with error message
+c) invalid email registration errors
+d) Actual entry in database on succesful Registration
+e) Non Entry in database on unsuccessful regisration.
+f) various combo against Password field
+g) Validate Rightful registration against rightful product only.
+h) Unsuccessful registration over fields that are not completely filled/left blank.
+i) validate user successfully mapped to the product after successful registration.
+
+6) If the Google Recaptcha exists, what will you do to unblock the sign up automation tests and further tests after successful registration
+
+Ans ) I would try to handle the script using webdriverwait to make it more like a human like experience and avoid recaptcha triggering . This is more of a preventive approach. Other approach is to use websites that serve as an API to return the captcha . I would further explore on more ways to avoid recapcha or handle it on google.
+
+7) If you had to run the Sign Up test flow 100 times, each using a different email, what would you do to run the test efficiently?
+
+If i have integrated TestNG , then one of its features is Dataprovider where i can reiterate the test any number of times with different data given in form of object array . So using that feature i can invoke the same @Test testcase 100 times.
+Similarly if we are using Cucumber framework , we can make use of "Scenario Outlines" and "Examples" to provide 100 set of test data and run the same test case 100 times.
+
+
+8) What else would you verify to make sure that the account has signed up successfully?
+
+I would want to validate the presence of "Successful sign up " message . Also i would like to validate the absence of "Unsuccessful sign up error message" . I can do it by capturing the text using getText() function and then putting assertions to vaidate . 
+I would want to connect to database ( mysql for ex) using Connection classes and Database credentials and validate a successful entry for the signed up user to be 100 percent sure.
+
+
